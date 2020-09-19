@@ -32,3 +32,37 @@ def index(request):
 
 ```
 
+8. In the polls/urls.py include the following 
+
+```
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+
+```
+9. The next step is to point the root URLconf at the polls.urls module. In mysite/urls.py, add an import for django.urls.include and insert an include() in the urlpatterns list, so you have:
+
+```
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+
+```
+You should always use include() when you include other URL patterns. admin.site.urls is the only exception to this.
+
+10.  verify it's working 
+
+```python manage.py runserver```
+
+go to http://localhost:8000/polls and your should see your hello world, you're at the polls index
+
+11.
+
