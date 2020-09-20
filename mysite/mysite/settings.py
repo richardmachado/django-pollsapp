@@ -35,6 +35,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#? here is where you import you installed apps 
+#! New applications should avoid default_app_config. Instead they should require the dotted path to the appropriate AppConfig subclass to be configured explicitly in INSTALLED_APPS.
+
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'django.contrib.admin',
@@ -121,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Los_Angeles'
 
 USE_I18N = True
 
