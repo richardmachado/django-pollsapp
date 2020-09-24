@@ -151,3 +151,5 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+DISABLE_COLLECTSTATIC=1
