@@ -1,0 +1,9 @@
+li a {
+  color: blue;
+  text-decoration: none;
+  font-size: x-large;
+}
+
+body {
+  background: white url("images/background.gif") no-repeat;
+}
